@@ -1,7 +1,7 @@
 <?php
 // parameters
 $hubVerifyToken = 'hello';
-$accessToken = "EAAMAnURJkEwBADjLiy2baEckDAvqbc2gPjDLyZB58DgN5HiFZC7UY1bbCKPlKbi6XFrLtLk35mcWXvZAH8r8YaR2Od8pZAQaTjWdjTWyoaWbQQMXuwE0kYixVClYASTJgCHK0wr0GIwLsDaIjRTfT6ZCxGTsTRvnZC13vSm9cZBeAZDZD";
+$accessToken = "EAAMAnURJkEwBAEIY3ZACw7CqjH9ZBSrqLZCHsHMFLngvPApIZAucKKUiI0Eq7nZBIQuVQFUvs79qa4H2oeIxlSFHL5l0iKi13OkJ6nj1V964DyCn4ouejs779J2fJQXAAWaBytvFtIFpML8r3w84CQoZADC32xGVkGzuouLwhg0wZDZD";
 
 // check token at setup
 if ($_REQUEST['hub_verify_token'] === $hubVerifyToken) {
