@@ -1,7 +1,7 @@
 <?php
 // parameters
 $hubVerifyToken = 'hello';
-$accessToken = "EAAMAnURJkEwBAEIY3ZACw7CqjH9ZBSrqLZCHsHMFLngvPApIZAucKKUiI0Eq7nZBIQuVQFUvs79qa4H2oeIxlSFHL5l0iKi13OkJ6nj1V964DyCn4ouejs779J2fJQXAAWaBytvFtIFpML8r3w84CQoZADC32xGVkGzuouLwhg0wZDZD";
+$accessToken = "EAAcJXK3cz08BACHKnIZAAIT4wOS99lB8jSqMNGnu9SKjP53Er1ydRzmOBNZAH3ao4ZAtcl0t8cVxlnDGPJbzIUtc3UnvZB4JyZBuZAwrI3Oz64xtl1TWY42fySyjVZACGTropj3zGAmpvFyVplVyP0qrDpwBwZAgmlwuEbfwXiqQ2gZDZD";
 
 // check token at setup
 if ($_REQUEST['hub_verify_token'] === $hubVerifyToken) {
@@ -16,7 +16,9 @@ $senderId = $input['entry'][0]['messaging'][0]['sender']['id'];
 $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
 
 
-$answer = "I don't understand.";
+if($messageText =! "") {
+    $answer = "i got your question";
+}
 
 
 $response = [
