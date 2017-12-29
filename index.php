@@ -16,10 +16,8 @@ $senderId = $input['entry'][0]['messaging'][0]['sender']['id'];
 $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
 
 
-$answer = "I don't understand. Ask me 'hi'.";
-if($messageText == "hi") {
-    $answer = "Hello";
-}
+$answer = "I don't understand.";
+
 
 $response = [
     'recipient' => [ 'id' => $senderId ],
@@ -31,5 +29,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($response));
 curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
 curl_exec($ch);
 curl_close($ch);
+
+
 
 //based on http://stackoverflow.com/questions/36803518
