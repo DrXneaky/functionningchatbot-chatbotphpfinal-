@@ -16,9 +16,10 @@ $senderId = $input['entry'][0]['messaging'][0]['sender']['id'];
 $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
 
 
-if($messageText =! "") {
+if($messageText) {
     $answer = "i got your question";
-}
+
+
 
 
 $response = [
@@ -33,5 +34,7 @@ curl_exec($ch);
 curl_close($ch);
 
 
+}
 
-//based on http://stackoverflow.com/questions/36803518
+
+?>
