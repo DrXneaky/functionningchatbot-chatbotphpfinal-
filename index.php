@@ -17,7 +17,10 @@ $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
 
 
 if($messageText) {
-    $answer = "i got your question";
+
+    $out=str_replace(" ","*",$messageText);
+
+    $answer=exec("python fonction1.py $out");
 
 
 
